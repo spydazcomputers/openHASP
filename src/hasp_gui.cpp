@@ -10,6 +10,7 @@
 #include "dev/device.h"
 #include "drv/tft/tft_driver.h"
 #include "drv/touch/touch_driver.h"
+#include "drv/i2c_backlight/i2c_backlight.h"
 
 #include "hasp_debug.h"
 #include "hasp_gui.h"

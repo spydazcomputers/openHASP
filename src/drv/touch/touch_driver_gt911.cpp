@@ -121,17 +121,7 @@ found:
         LOG_WARNING(TAG_DRVR, "GT911 %s", D_SERVICE_START_FAILED);
     }
     
-   Wire.begin(TOUCH_SDA, TOUCH_SCL);
-    Wire.beginTransmission(0x30);
-    //Wire.write(250);
-    Wire.write(16);
-      if(Wire.endTransmission() == 0) {
-            LOG_INFO(TAG_DRVR, "Buzzer set");
-        } else {
-            LOG_WARNING(TAG_DRVR, "Backlight not set");
-        }
-  
-    Wire.begin(TOUCH_SDA, TOUCH_SCL, (uint32_t)I2C_TOUCH_FREQUENCY);
+   Wire.begin(TOUCH_SDA, TOUCH_SCL, (uint32_t)I2C_TOUCH_FREQUENCY);
     touch_scan(Wire); // The address could change during begin, so scan afterwards
 
 }
